@@ -1,0 +1,55 @@
+// @import "../../variables";
+
+.fl-btn-wrapper {
+  display: flex;
+  align-items: center;
+  color: var(--fl-color-text);
+  //display: inline-block;
+  -webkit-app-region: no-drag; // for Electron
+}
+
+.fl-btn-icon {
+  display: flex;
+  cursor: pointer;
+  height: unset;
+  width: unset;
+}
+
+.fl-btn-icon-disabled {
+  //cursor: default !important;
+  color: var(--fl-color-disabled) !important;
+}
+
+.fl-btn-common() {
+  display: flex !important;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  /*margin-right: 5px;*/
+  border-radius: 100%;
+  background-color: var(--fl-background-primary);
+  /*color: var(--main-background) !important;*/
+  color: var(--fl-color-primary);
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    //  color: var(--fl-color-icons-hover);
+    //  transform: translateY(-1px) translateX(+1px);
+  }
+}
+
+.fl-btn {
+  .fl-btn-common()
+}
+
+.fl-btn-rect {
+  .fl-btn-common();
+  border-radius: 25%;
+}

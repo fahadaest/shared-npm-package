@@ -1,0 +1,234 @@
+@import "../../variables";
+
+.fl-smart-editor {
+  //padding-top: 5px;
+  //height: 100%;
+
+  .actions {}
+
+  .content {
+    //div:first-child {
+    //  height: 100%;
+    //}
+  }
+
+  .content>*:first-child {
+    height: 100%;
+  }
+
+  .inactive {
+    opacity: 0.5;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+  }
+}
+
+
+.is-active {
+  color: var(--fl-background-primary);
+}
+
+.se-btn-group {
+  position: sticky;
+  top: 36px;
+  background: var(--fl-background-accent);
+  justify-content: space-around; //center;
+  padding-top: 3px;
+  padding-bottom: 6px;
+  display: flex;
+  border-radius: 7px;
+  //background: var(--fl-background-hover);
+  //background: var(--fl-background-content);
+
+  .left,
+  .middle,
+  .right {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.se-btn-group-floating {
+  border-radius: 5px;
+  border: var(--fl-border-color-nice) 2px solid;
+}
+
+.se-btn {
+  padding: 4px;
+
+  //border-right: var(--fl-border-color-nice) 1px solid;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+
+/* Basic editor styles */
+.tiptap {
+  outline: none;
+
+  :first-child {
+    //margin-top: 0;
+  }
+
+  /* List styles */
+  ul,
+  ol {
+    padding: 0;
+    padding-left: 15px;
+    //padding: 0 1rem;
+    //margin: 10px 4px 8px 4px;
+    margin: 4px 4px 4px 8px;
+    //margin: 0.6rem 0.4rem 0.6rem 0.4rem;
+
+    li p {
+      padding: 0;
+      margin: 0 0 3px 0;
+      //margin-top: 0.25em;
+      //margin-bottom: 0.25em;
+    }
+  }
+
+  /* Heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+    margin-top: 0.5rem;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  h3 {
+    font-size: 1.0em;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+
+  /* Code and preformatted text styles */
+  //code {
+  //  background-color: var(--purple-light);
+  //  border-radius: 0.4rem;
+  //  color: var(--black);
+  //  font-size: 0.85rem;
+  //  padding: 0.25em 0.3em;
+  //}
+
+  pre {
+    background: var(--fl-background-accent);
+    border-radius: 0.5rem;
+    //border-style: dashed;
+    color: var(--fl-color-text);
+    font-family: 'JetBrainsMono', monospace;
+    margin: 1rem 0;
+    padding: 0.5rem 0.5rem;
+
+    code {
+      overflow: auto;
+      background: none;
+      color: inherit;
+      font-size: smaller;
+      padding: 0;
+    }
+
+    /* Code styling */
+    .hljs-comment,
+    .hljs-quote {
+      color: #999;
+      /* Light gray for comments and quotes */
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute,
+    .hljs-tag,
+    .hljs-name,
+    .hljs-regexp,
+    .hljs-link,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class {
+      color: #f00;
+      /* Red for variables and identifiers */
+    }
+
+    .hljs-number,
+    .hljs-meta,
+    .hljs-built_in,
+    .hljs-builtin-name,
+    .hljs-literal,
+    .hljs-type,
+    .hljs-params {
+      color: #0a0;
+      /* Dark green for numbers and literals */
+    }
+
+    .hljs-string,
+    .hljs-symbol,
+    .hljs-bullet {
+      color: #080;
+      /* Darker green for strings */
+    }
+
+    .hljs-title,
+    .hljs-section {
+      color: #a80;
+      /* Orange for titles and sections */
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag {
+      color: #00f;
+      /* Blue for keywords */
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-strong {
+      font-weight: 700;
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid var(--fl-border-color-nice-solid);
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--fl-border-color-nice-solid);
+    //margin: 2rem 0;
+  }
+}

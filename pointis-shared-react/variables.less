@@ -1,0 +1,183 @@
+@primary-color: #3498db;
+@font-size: 16px;
+
+@view-small-width: 602px;
+@view-x-small-width: 400px;
+
+@max-height: 400px; //326px //290px;
+@max-width: 550px;
+@min-height: 250px;
+@min-content-height: 200px; //135px;
+@min-width: 350px;
+
+@max-content-text-width: 750px;
+
+@zindex: 2000000;
+@zindex-assist: 2000000 + 10;
+@zindex-control: 2000000 + 20;
+@view-xsmall-width: 400px;
+@view-small-width: 602px;
+
+@content-font-size: 14px;
+@content-font-size-sidebars: 14px;
+@content-smaller-font-size: 11px;
+
+@assist-font-size: 12px;
+
+@text-line-height: 1.2;
+
+@main-font-family: 'Noto Sans', sans-serif;
+@main-font-weight: 'normal';
+
+@desktop: ~"(min-width: @{view-small-width})";
+@tablet: ~"(max-width: @{view-small-width})";
+@mobile: ~"(max-width: @{view-x-small-width})";
+
+// someone liked
+//.light1 {
+//  --fl-color-text-light: #444;
+//  --fl-color-disabled: lightgray;
+//
+//  --fl-background-primary: #f6f4f0; // Soft, warm white with a hint of cream
+//  --fl-background-hover: #e8e6e2; // Lighter shade for hover effects
+//  --fl-background-accent: #d9d7d3; // Subtle accent color
+//  --fl-background-input: #fff; // Pure white for input fields
+//  --fl-background-content: #f6f4f0; // Same as primary background for content
+//  --fl-color-icons: #777; // Soft gray for icons
+//  --fl-color-icons-hover: #4a5568; // TODO
+//  --fl-color-primary: #444; // Dark gray for primary text and accents
+//  --fl-color-text: #444; // Same as primary color for main text
+//  --fl-color-text-inverse: #fff; // White for inverse text
+//  --fl-color-text-minor: #999; // Light gray for secondary text
+//  --fl-border-color-primary: #d9d7d3; // Subtle border color
+//  --fl-border-color-nice: rgba(217, 215, 209, 0.2); // Light gray border for transparency
+//  --fl-border-color-nice-solid: rgba(217, 215, 209, 1); // Solid light gray border
+//
+//  --background-color-notification: #ffffff;
+//  --border-color-notification: #e2e8f0;
+//  --gradient-notification-progress: linear-gradient(to right, #3b82f6, #8b5cf6);
+//}
+
+//ORIGINAL
+//.original {
+//  --fl-color-text-light: #444;
+//  --fl-color-disabled: lightgray;
+//
+//  --fl-background-primary: #233e61;
+//  --fl-background-hover: #ffffff;
+//  --fl-background-accent: whitesmoke;
+//  --fl-background-input: white;
+//  --fl-background-content: #eee;
+//  --fl-color-icons: #233e61;
+//  --fl-color-icons-hover: #4a5568; // TODO
+//  --fl-color-primary: #ffffff;
+//  --fl-color-text: black;
+//  --fl-color-text-inverse: white;
+//  --fl-color-text-minor: #666;
+//  --fl-border-color-primary: lightgrey;
+//  --fl-border-color-nice: rgba(230, 230, 230, 0.2);
+//  --fl-border-color-nice-solid: rgba(230, 230, 230, 1);
+//  --background-color-notification: #ffffff;
+//  --border-color-notification: #e2e8f0;
+//  --gradient-notification-progress: linear-gradient(to right, #3b82f6, #8b5cf6);
+//}
+
+.shared-colors() {
+    --fl-color-brand: #E97545;
+    // TODO: might not be used
+    --fl-color-text-light: #444;
+}
+
+// Nice experimental bright scheme
+.fl-light-mode {
+    .shared-colors();
+
+    --fl-color-disabled: lightgray;
+
+    --fl-background-primary: #f2f6f9; // Soft, light blue-gray
+    --fl-background-hover: #e8f0f3; // Lighter shade for hover effects
+    --fl-background-accent: #d9e3e8; // Subtle accent color
+    --fl-background-control: #8c9eff;
+    --fl-background-input: #fff; // Pure white for input fields
+    --fl-background-content: #f2f6f9; // Same as primary background for content
+    --fl-background-card: #e6e8ea;
+    --fl-color-icons: #667885; // Soft gray for icons
+    --fl-color-icons-hover: #4a5568; // TODO
+    --fl-color-primary: #334c5f; // Darker blue for primary text and accents
+    --fl-color-text: #334c5f; // Same as primary color for main text
+    --fl-color-text-inverse: #fff; // White for inverse text
+    --fl-color-text-minor: #8899a6; // Light gray for secondary text
+    --fl-border-color-primary: #d9e3e8; // Subtle border color
+    --fl-border-color-nice: rgba(217, 227, 232, 0.2); // Light gray border for transparency
+    --fl-border-color-nice-solid: rgba(217, 227, 232, 1); // Solid light gray border
+
+    --background-color-notification: #ffffff;
+    --border-color-notification: #e2e8f0;
+    --gradient-notification-progress: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+
+.fl-dark-mode {
+    .shared-colors();
+
+    --fl-color-disabled: gray;
+
+    --fl-background-primary: #222831;
+    /* Slightly lighter deep blue-ish background */
+    //--fl-background-primary: #333333;   /* Slightly lighter deep blue-ish background */
+    --fl-background-hover: #393e46;
+    /* Panel hover for clear interaction */
+    //--fl-background-accent: rgb(45, 45, 45);      /* Slightly lighter for panels */
+    --fl-background-accent: #2d333b;
+    /* Slightly lighter for panels */
+    --fl-background-control: #3f51b5;
+    --fl-background-input: #343a40;
+    /* Blends with panels, but distinct */
+    //--fl-background-content: #333333;  /* Very slightly lighter than main bg */
+    --fl-background-content: #252a33;
+    /* Very slightly lighter than main bg */
+    --fl-background-card: #2d333b;
+
+    --fl-color-icons: #e0e2e5;
+    /* Lighter icons for better contrast */
+    --fl-color-primary: #d0d3d8;
+    /* Slightly lighter off-white for buttons */
+    --fl-color-text: #e0e2e5;
+    /* Comfortable off-white for text */
+    --fl-color-text-inverse: #222831;
+    /* Matches main background for overlays */
+    --fl-color-text-minor: #9aa0a8;
+    /* Slightly lighter gray for less important text */
+
+    --fl-border-color-primary: #4d5562;
+    /* Subtle separation line */
+    --fl-border-color-nice: rgba(77, 85, 98, 0.4);
+    /* Transparent for soft edges */
+    --fl-border-color-nice-solid: rgba(77, 85, 98, 0.8);
+    /* More visible when needed */
+
+    --background-color-notification: #2d333b;
+    --border-color-notification: #4a5259;
+    --fl-color-icons-hover: #eff1f3;
+}
+
+//.fl-dark-mode {
+//  --fl-background-primary: #1a1f27;   /* Deep blue-ish background */
+//  --fl-background-hover: #2c343f;  /* Panel hover for clear interaction */
+//  --fl-background-accent: #212830;      /* Slightly lighter for panels */
+//  --fl-background-input: #282f39;     /* Blends with panels, but distinct */
+//  --fl-background-content: #1d222a;  /* Very slightly lighter than main bg */
+//
+//  --fl-color-icons: #dadcdf;           /* Light icons for contrast */
+//  --fl-color-primary: #c5c8d0;        /* Slightly off-white for buttons */
+//  --fl-color-text: #d4d7dd;           /* Comfortable off-white for text */
+//  --fl-color-text-inverse: #1a1f27;  /* Matches main background for overlays */
+//  --fl-color-text-minor: #838a95;     /* Light gray for less important text */
+//
+//  --fl-border-color-primary: #3b424d;/* Subtle separation line */
+//  --fl-border-color-nice: rgba(60, 64, 73, 0.4);  /* Transparent for soft edges */
+//  --fl-border-color-nice-solid: rgba(60, 64, 73, 0.8); /* More visible when needed */
+//
+//  --background-color-notification: #1f2937;
+//  --border-color-notification: #374151;
+//  --fl-color-icons-hover: #e5e7eb;
+//}
